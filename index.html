@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="[ TLG ]black.png" type="image/x-icon" />
+    <title>Dictionary App</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="container">
+        <div id="nav">
+          <img id="logo" src="[ TLG ]black.png" alt="logo" />
+          <p id="title">Dictionary</p>
+          <button id="change-mode" onclick="darkMode()">dark</button>
+        </div>
+        <div id="search">
+          <input id="wo-rd" type="text" placeholder="input word here" />
+
+          <button onclick="wordLookup()" id="search-btn">Search</button>
+        </div>
+        <div id="result">
+          <p id="word">Nirvana</p>
+          <audio autoplay>
+            <source
+              src="https://api.dictionaryapi.dev/media/pronunciations/en/nirvana-au.mp3"
+              type="audio/ogg"
+            />
+            Your browser does not support the audio tag.
+          </audio>
+          <p id="definition">
+            A state of freedom from all suffering that Buddhists believe can be
+            achieved by removing all desires.
+          </p>
+          <div id="synonymn">
+            <p id="syns"><span>Synonyms:</span> <span>Enlightenment</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
