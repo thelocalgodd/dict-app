@@ -5,3 +5,6 @@
 - Pronunciation of word played automatically
 - Shows most words
 - Dark and Light mode
+
+![LightMode](light-mode.jpg)
+![DarkMode](dark-mode.jpg)
