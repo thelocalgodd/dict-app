@@ -22,7 +22,6 @@
   padding: 10px;
   margin: auto;
   width: 700px;
-  border: 1px solid black;
 }
 
 #nav {
@@ -182,6 +181,9 @@
 .dark-mode #result #synonymn #syns {
   color: #252525;
 }
+.dark-mode #footer #footer-text {
+  color: #ffffff;
+}
 
 @media only screen and (max-width: 600px) {
   #container {
@@ -219,6 +221,9 @@
     font-size: 15px;
   }
   #result #synonymn #syns {
+    font-size: 10px;
+  }
+  #footer #footer-text {
     font-size: 10px;
   }
 }
