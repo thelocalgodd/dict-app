@@ -21,7 +21,8 @@
   flex-direction: column;
   padding: 10px;
   margin: auto;
-  width: fit-content;
+  width: 700px;
+  border: 1px solid black;
 }
 
 #nav {
@@ -29,6 +30,14 @@
   justify-content: space-between;
   margin: 10px;
   align-items: center;
+}
+#nav #buttons {
+  display: flex;
+}
+#nav #buttons #github {
+  background-color: #ffffff;
+  margin-right: 5px;
+  width: 50px;
 }
 #nav img {
   height: 30px;
@@ -110,11 +119,40 @@
   margin: 10px;
 }
 
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+#footer #footer-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: "IBM Plex Mono", monospace;
+}
+#footer #footer-text a {
+  text-decoration: none;
+  color: #ff9393;
+}
+#footer #footer-text #footer-text {
+  margin-left: 5px;
+}
+#footer #footer-text #hidden {
+  color: transparent;
+}
+
 .dark-mode {
   transition: background-color 0.5s ease;
 }
 .dark-mode #wrapper {
   background-color: #252525;
+}
+.dark-mode #nav #buttons #github {
+  background-color: #ffffff;
+  margin-right: 5px;
+  width: 50px;
 }
 .dark-mode #search {
   border: 1px solid #ffffff;
@@ -143,6 +181,46 @@
 }
 .dark-mode #result #synonymn #syns {
   color: #252525;
+}
+
+@media only screen and (max-width: 600px) {
+  #container {
+    width: 370px;
+  }
+  #nav {
+    font-size: 15px;
+  }
+  #nav img {
+    height: 20px;
+  }
+  #nav #title {
+    font-size: 20px;
+  }
+  #nav #buttons button {
+    font-size: 12px;
+  }
+  #nav #buttons #change-mode {
+    width: 50px;
+  }
+  #search input {
+    width: 300px;
+    height: 30px;
+    font-size: 12px;
+  }
+  #search button {
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+  }
+  #result #word {
+    font-size: 20px;
+  }
+  #result #definition {
+    font-size: 15px;
+  }
+  #result #synonymn #syns {
+    font-size: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

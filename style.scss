@@ -27,7 +27,8 @@
     flex-direction: column;
     padding: 10px;
     margin: auto;
-    width: fit-content;
+    width: 700px;
+    border: 1px solid black;
 }
 
 
@@ -36,6 +37,16 @@
     justify-content: space-between;
     margin: 10px;
     align-items: center;
+
+    #buttons {
+        display: flex;
+        #github {
+            background-color: #ffffff;
+            margin-right: 5px;
+            width: 50px;
+
+        }
+    }
 
     img {
         height: 30px;
@@ -123,11 +134,50 @@
     }
 }
 
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+
+    #footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: 'IBM Plex Mono', monospace;
+
+    a {
+        text-decoration: none;
+        color: #ff9393;
+    }
+
+    #footer-text {
+        margin-left: 5px;
+    }
+
+    #hidden {
+        color: transparent;
+    }
+}
+}
+
 .dark-mode {
     transition: background-color 0.5s ease;
 
     #wrapper {
         background-color: #252525;
+    }
+
+    #nav {
+        #buttons {
+            #github {
+                background-color: #ffffff;
+                margin-right: 5px;
+                width: 50px;
+            }
+        }
     }
 
     #search {
@@ -163,6 +213,67 @@
 
             #syns {
                 color: #252525;
+            }
+        }
+    }
+}
+
+// Existing code...
+
+@media only screen and (max-width: 600px) {
+    #container {
+        width: 370px;
+    }
+
+    #nav {
+        font-size: 15px;
+
+        img {
+            height: 20px;
+        }
+
+        #title {
+            font-size: 20px;
+        }
+
+        #buttons {
+            
+            button {
+                font-size: 12px;
+            }
+
+            #change-mode {
+                width: 50px;
+            }
+        }
+    }
+
+    #search {
+        input {
+            width: 300px;
+            height: 30px;
+            font-size: 12px;
+        }
+
+        button {
+            width: 80px;
+            height: 30px;
+            font-size: 12px;
+        }
+    }
+
+    #result {
+        #word {
+            font-size: 20px;
+        }
+
+        #definition {
+            font-size: 15px;
+        }
+
+        #synonymn {
+            #syns {
+                font-size: 10px;
             }
         }
     }

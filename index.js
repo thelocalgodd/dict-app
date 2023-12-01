@@ -4,6 +4,7 @@ function darkMode() {
 
   let button = document.getElementById("change-mode");
   let logo = document.getElementById("logo");
+  let ghbutton = document.getElementsByTagName("svg");
   if (element.classList.contains("dark-mode")) {
     button.textContent = "Light";
     logo.src = "[ TLG ]white.png";
@@ -25,24 +26,22 @@ function wordLookup() {
       let synonym = data[0].meanings[0].definitions[0].synonyms;
       let audio = data[0].phonetics[0].audio;
 
-      if (data.title === "No Definitions Found") {
-        document.getElementById("word").innerHTML = "Word not found";
-        document.getElementById("definition").innerHTML = "Undefined";
-        document.getElementById("syns").innerHTML = "Undefined";
-        document.getElementsByTagName("audio").src = "";
-      }
+      console.log(audio);
 
       document.getElementById("word").innerHTML = word;
       document.getElementById("definition").innerHTML = meaning;
       document.getElementById("syns").innerHTML = synonym;
-      document.getElementsByTagName("audio").src = audio;
+      document.getElementById("audio").src = audio; // Fix: Use getElementById instead of getElementsByTagName
+    })
+    .catch((error) => {
+      console.error("Error:", error);
     });
 }
 
-document
-  .getElementById("search-btn")
-  .addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      wordLookup();
-    }
-  });
+document.getElementById("search-btn").addEventListener("click", wordLookup);
+
+document.getElementById("wo-rd").addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    wordLookup();
+  }
+});
